@@ -1,0 +1,97 @@
+:root { --ink: #17231f; --muted: #78827d; --line: #e3e9e5; --card: #fff; --green: #2e7159; --pale-green: #e5f1eb; --orange: #e58b50; }
+.app-shell { display: flex; min-height: 100vh; background: #f5f7f5; }
+.sidebar { width: 240px; padding: 28px 16px 20px; background: #fff; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 0 12px 42px; font-size: 15px; font-weight: 800; letter-spacing: .12em; }
+.brand-mark { display: grid; place-items: center; width: 28px; height: 28px; color: #fff; background: var(--green); border-radius: 9px; font-size: 17px; }
+.brand-accent { color: var(--orange); }
+nav { display: grid; gap: 7px; }
+.nav-item { display: flex; align-items: center; gap: 14px; padding: 12px; color: var(--muted); border: 0; border-radius: 10px; background: transparent; text-align: left; }
+.nav-item:hover, .nav-item.active { color: var(--green); background: var(--pale-green); font-weight: 700; }
+.nav-icon { width: 18px; text-align: center; font-size: 18px; }
+.sidebar-footer { display: flex; align-items: center; gap: 10px; margin-top: auto; padding: 16px 12px 0; border-top: 1px solid var(--line); }
+.avatar { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #fff; background: #d98b60; font-weight: 700; }
+.sidebar-footer small, .sidebar-footer strong { display: block; }
+.sidebar-footer small { margin-top: 3px; color: var(--muted); font-size: 11px; }
+.main-content { flex: 1; min-width: 0; }
+.topbar { display: flex; align-items: center; justify-content: space-between; height: 74px; padding: 0 5%; border-bottom: 1px solid var(--line); background: #fff; }
+.current-page { color: var(--muted); font-size: 14px; }
+.topbar-actions { display: flex; align-items: center; gap: 18px; }
+.icon-button, .mobile-menu { border: 0; color: var(--muted); background: transparent; font-size: 20px; }
+.mobile-menu { display: none; }
+.page-content { max-width: 1180px; margin: 0 auto; padding: 44px 5%; }
+.hero { display: flex; align-items: end; justify-content: space-between; margin-bottom: 30px; }
+.eyebrow { display: block; margin-bottom: 7px; color: var(--green); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 500px; margin-bottom: 10px; font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -.05em; }
+h2 { margin-bottom: 0; font-size: 24px; letter-spacing: -.03em; }
+h3 { margin-bottom: 8px; font-size: 17px; }
+p { color: var(--muted); line-height: 1.6; }
+.hero p { margin: 0; }
+.primary-button, .secondary-button { border: 0; border-radius: 8px; padding: 11px 16px; font-size: 13px; font-weight: 700; }
+.primary-button { color: #fff; background: var(--green); }
+.primary-button:hover { background: #245c48; }
+.secondary-button { color: var(--green); background: var(--pale-green); }
+.full-width { width: 100%; margin-top: 20px; }
+.text-button { padding: 0; border: 0; color: var(--green); background: transparent; font-size: 12px; font-weight: 700; }
+.stats-grid, .dashboard-grid, .exercise-grid, .template-grid, .goal-grid { display: grid; gap: 18px; }
+.stats-grid { grid-template-columns: repeat(3, 1fr); margin-bottom: 22px; }
+.dashboard-grid { grid-template-columns: 1.3fr 1fr; }
+.card { padding: 24px; border: 1px solid var(--line); border-radius: 13px; background: var(--card); }
+.stats-grid .card { min-height: 130px; }
+.stat-label, .stat-value, .card small { display: block; }
+.stat-label { color: var(--muted); font-size: 12px; }
+.stats-grid strong { display: block; margin: 12px 0 3px; font-size: 28px; letter-spacing: -.04em; }
+.card small { color: var(--muted); font-size: 11px; }
+.section-title { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.stack-list { display: grid; gap: 18px; }
+.list-row, .settings-row { display: flex; align-items: center; gap: 12px; }
+.list-row > div:nth-child(2) { flex: 1; }
+.list-row strong, .list-row small { display: block; }
+.list-row small { margin-top: 4px; }
+.icon-box, .exercise-icon { display: grid; place-items: center; color: var(--green); background: var(--pale-green); }
+.icon-box { width: 34px; height: 34px; border-radius: 9px; }
+.row-value { color: var(--green); font-size: 12px; font-weight: 700; }
+.goal-item { display: grid; gap: 8px; }
+.goal-heading { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.goal-heading span { color: var(--muted); font-size: 12px; }
+.progress-track { height: 7px; overflow: hidden; border-radius: 99px; background: #edf0ed; }
+.progress-value { height: 100%; border-radius: inherit; background: var(--orange); }
+.toolbar { display: flex; gap: 10px; margin-bottom: 20px; padding: 14px; }
+input { width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: 8px; outline: none; background: #fafcfa; }
+input:focus { border-color: var(--green); }
+.exercise-grid { grid-template-columns: repeat(3, 1fr); }
+.exercise-card { position: relative; display: flex; align-items: flex-start; gap: 14px; }
+.exercise-icon { flex: 0 0 42px; width: 42px; height: 42px; border-radius: 11px; font-size: 20px; }
+.exercise-card h3 { margin-top: 8px; }
+.exercise-card p { margin-bottom: 8px; font-size: 12px; }
+.tag { color: var(--green); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.more-button { margin-left: auto; padding: 0; border: 0; color: var(--muted); background: transparent; letter-spacing: 2px; }
+.active-card { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-color: #b7d6c6; background: var(--pale-green); }
+.active-card h3, .active-card p { margin-bottom: 0; }
+.history-list { display: grid; gap: 5px; }
+.history-row { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.history-row:last-child { border-bottom: 0; }
+.history-row > div:nth-child(2) { flex: 1; }
+.history-row strong, .history-row small { display: block; }
+.history-row small { margin-top: 5px; color: var(--muted); font-size: 12px; }
+.date-box { display: grid; place-items: center; width: 42px; height: 46px; border-radius: 8px; color: var(--green); background: var(--pale-green); font-weight: 800; }
+.date-box small { margin: 0; color: var(--green); font-size: 10px; text-transform: uppercase; }
+.template-grid, .goal-grid { grid-template-columns: repeat(2, 1fr); }
+.template-top { display: flex; justify-content: space-between; }
+.template-card p { font-size: 13px; }
+.template-exercises { display: grid; gap: 7px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+.template-exercises span::before { content: "•"; margin-right: 8px; color: var(--orange); }
+.large-goal { position: relative; }
+.goal-symbol { display: grid; place-items: center; width: 38px; height: 38px; margin-bottom: 18px; border-radius: 10px; color: var(--green); background: var(--pale-green); }
+.large-goal p { margin-bottom: 5px; font-size: 12px; }
+.large-goal > strong { display: block; margin-bottom: 22px; font-size: 25px; }
+.large-goal .text-button { margin-top: 22px; }
+.settings-card { max-width: 680px; }
+.settings-row { justify-content: space-between; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.settings-row:last-child { border-bottom: 0; }
+.settings-row strong, .settings-row small { display: block; }
+.settings-row small { margin-top: 4px; }
+.setting-pill, .status-dot { padding: 6px 10px; border-radius: 7px; color: var(--green); background: var(--pale-green); font-size: 11px; font-weight: 700; }
+.status-dot { padding: 0; background: transparent; }
+@media (max-width: 850px) { .sidebar { width: 190px; } .exercise-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 650px) { .sidebar { display: none; } .mobile-menu { display: block; } .page-content { padding: 28px 18px; } .topbar { padding: 0 18px; } .hero { display: block; } .hero .primary-button { margin-top: 20px; } .stats-grid, .dashboard-grid, .template-grid, .goal-grid, .exercise-grid { grid-template-columns: 1fr; } .card { padding: 19px; } .history-row .text-button { display: none; } }
